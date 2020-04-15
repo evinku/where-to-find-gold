@@ -1,0 +1,52 @@
+openapi: 3.0.2
+info:
+  title: where-to-find-gold-api
+  description: |
+    The api where-to-find-gold
+  version: 0.0.1
+servers:
+- url: /
+tags:
+- name: Gold-Places
+paths:
+  /gold-places/{latitude}/{longitude}/{radius}:
+    get:
+      tags:
+      - Gold-Places
+      summary: list all available gold-places
+      operationId: gold_placesLatitudeLongitudeRadiusGET
+      parameters:
+      - name: latitude
+        in: path
+        description: latitude for search gold-places
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: number
+      - name: longitude
+        in: path
+        description: longitude for search gold-places
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: number
+      - name: radius
+        in: path
+        description: radius for search gold-places
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: number
+      responses:
+        "200":
+          description: An object of gold-places near location
+          content:
+            application/json:
+              schema:
+                type: object
+                x-content-type: application/json
+      x-swagger-router-controller: GoldPlaces
+components: {}

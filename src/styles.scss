@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~bootstrap/scss/bootstrap";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:hover {
+  outline: none;
+}
+
+.mat-form-field-label {
+  color: rgb(117, 117, 117) !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: rgb(117, 117, 117) !important;
+}
+
+input:empty {
+  font-size: 0.8em;
+}

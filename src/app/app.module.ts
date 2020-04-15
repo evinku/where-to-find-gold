@@ -41,7 +41,7 @@ export function apiConfigFactory(): Configuration {
     ReactiveFormsModule,
     MatGoogleMapsAutocompleteModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyDtmSb3ERdG6e7RYNArwN6CSao1caqXEHY",
+      apiKey: "Api-key",
       libraries: ["places"],
     }),
   ],

@@ -52,7 +52,6 @@ export class AppComponent implements OnInit {
   }
 
   onLocationSelected(location: Location) {
-    console.log("onLocationSelected: ", location);
     this.latitude = location.latitude;
     this.longitude = location.longitude;
     this.getGoldPlaces();
@@ -71,7 +70,6 @@ export class AppComponent implements OnInit {
         this.radius
       )
       .subscribe((res) => {
-        console.log(res);
         this.status = res.status;
         this.results = res.results.sort(
           (a, b) =>

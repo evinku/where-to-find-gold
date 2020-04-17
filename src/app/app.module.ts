@@ -16,8 +16,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 export function apiConfigFactory(): Configuration {
-  console.log(window.location);
-
   const params: ConfigurationParameters = {
     basePath: window.location.origin,
   };

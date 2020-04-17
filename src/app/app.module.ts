@@ -2,6 +2,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
@@ -27,6 +28,7 @@ export function apiConfigFactory(): Configuration {
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    FlexLayoutModule,
     NgbModule,
     BrowserModule,
     HttpClientModule,
@@ -41,7 +43,7 @@ export function apiConfigFactory(): Configuration {
     ReactiveFormsModule,
     MatGoogleMapsAutocompleteModule,
     AgmCoreModule.forRoot({
-      apiKey: "Api-key",
+      apiKey: "AIzaSyDtmSb3ERdG6e7RYNArwN6CSao1caqXEHY",
       libraries: ["places"],
     }),
   ],
